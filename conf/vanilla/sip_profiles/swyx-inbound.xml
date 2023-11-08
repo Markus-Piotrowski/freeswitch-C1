@@ -8,6 +8,10 @@
     -->
     </aliases>
 
+    <gateways>
+        <X-PRE-PROCESS cmd="include" data="swyx/*.xml"/>
+    </gateways>
+
     <domains>
         <domain name="all" alias="false" parse="true"/>
     </domains>
