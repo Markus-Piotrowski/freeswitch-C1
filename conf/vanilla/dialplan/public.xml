@@ -15,7 +15,8 @@
 
     <extension name="Send to JS">
       <condition field="destination_number" expression=".">
-        <action application="socket" data="$${middleware_ip}:$${esl_port} async full"/>
+        <!-- <action application="socket" data="$${middleware_ip}:$${esl_port} async full"/> -->
+        <action application="javascript" data="Router.js" />
       </condition>
     </extension>
 
