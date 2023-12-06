@@ -1,0 +1,10 @@
+<gateway name="Swyx-Trunk">
+    <param name="proxy" value="c1.HusFreeSwitch.se" />
+    <param name="from-domain" value="c1.HusFreeSwitch.se"/>
+    <param name="outbound-proxy" value="192.168.8.61:65002"/>
+    <param name="realm" value="c1.HusFreeSwitch.se" />
+    <param name="register" value="false" />
+    <param name="caller-id-in-from" value="true"/>
+    <param name="username" value="not-used"/>
+    <param name="password" value="not-used"/>
+</gateway>
