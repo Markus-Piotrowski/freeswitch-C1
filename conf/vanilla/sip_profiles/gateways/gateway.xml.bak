@@ -1,0 +1,9 @@
+<!-- <gateway name="Trunk">
+    <param name="username" value="HEJHEJ-Test" />
+    <param name="password" value="EX-Pass" />
+    <param name="proxy" value="example.com" />
+    <param name="realm" value="example.se" />
+    <param name="register" value="true" />
+    <param name="context" value="Trunk-Inbound" />
+    <param name="caller-id-in-from" value="true"/>
+</gateway> -->
