@@ -6,12 +6,6 @@
                <!-- <param name="gateway-credentials" value="freeswitch:works"/>
                <param name="auth-scheme" value="basic"/> -->
           </binding>
-          <binding name="dialplan">
-               <param name="gateway-url" value="$${middleware_ip}/config/dialplan" bindings="dialplan"/>
-               <param name='method' value='GET' />
-               <!-- <param name="gateway-credentials" value="freeswitch:works"/>
-               <param name="auth-scheme" value="basic"/> -->
-          </binding>
           <!-- <binding name="configuration">
                <param name="gateway-url" value="$${middleware_addr}/config" bindings="configuration"/>
                <param name='method' value='GET' />
