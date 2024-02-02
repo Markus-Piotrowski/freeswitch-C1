@@ -46,7 +46,7 @@ jobs:
                   tags: ${{ steps.meta.outputs.tags }}
                   labels: ${{ steps.meta.outputs.labels }}
                   build-args: |
-                      TOKEN= ${{ secrets.SIGNALWIRE_TOKEN }}
+                      TOKEN=${{ secrets.SIGNALWIRE_TOKEN }}
 
 
             # - name: Checkout ops repo
