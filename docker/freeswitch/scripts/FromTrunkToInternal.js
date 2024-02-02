@@ -17,7 +17,7 @@ function userInternalNumber(data) {
 
 let res = curl.run(
     'GET',
-    `http://${middleware_ip}:3000/user/external-to-internal`,
+    `http://${middleware_ip}/user/external-to-internal`,
     'destinationNumber=' + destination_number,
     userInternalNumber,
     '',

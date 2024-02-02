@@ -31,7 +31,7 @@ const data = {
     queueIdRelation: '123456',
 };
 
-let res = curl.run('POST', 'http://localhost:3000/queue/add', 'data=' + JSON.stringify(data), '', '', '', 10);
+let res = curl.run('POST', `http://${middleware_ip}/queue/add`, 'data=' + JSON.stringify(data), '', '', '', 10);
 
 while (isInQueue) {
     msleep(500);
@@ -48,7 +48,7 @@ while (isInQueue) {
     };
     let res = curl.run(
         'POST',
-        'http://localhost:3000/queue/check',
+        `http://${middleware_ip}/queue/check`,
         'data=' + JSON.stringify(data),
         callStatus,
         '',
@@ -91,7 +91,7 @@ const disconnectData = {
 
 const res2 = curl.run(
     'POST',
-    'http://localhost:3000/queue/leave',
+    `http://${middleware_ip}/queue/leave`,
     'data=' + JSON.stringify(disconnectData),
     '',
     '',
