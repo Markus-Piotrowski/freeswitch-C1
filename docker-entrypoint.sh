@@ -17,11 +17,6 @@ file="/usr/local/freeswitch/conf/C1_Vars.xml"
 sed "s/middleware_ip=localhost/middleware_ip=${MIDDLEWARE_ADDR}/gi" -i $file
 sed "s/esl_port=7000/esl_port=${ESL_SERVER_PORT}/gi" -i $file
 
-    if [ ! -f "/etc/freeswitch/freeswitch.xml" ]; then
-        mkdir -p /etc/freeswitch
-        cp -varf /usr/share/freeswitch/conf/vanilla/* /etc/freeswitch/
-    fi
-
     chown -R freeswitch:freeswitch /etc/freeswitch
     chown -R freeswitch:freeswitch /var/{run,lib}/freeswitch
 
