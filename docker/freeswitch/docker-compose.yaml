@@ -1,0 +1,27 @@
+services:
+    freeswitch:
+        image: customer1st/c1-freeswitch:dev-latest
+        environment:
+            - MIDDLEWARE_ADDR=127.0.0.1
+        healthcheck:
+            test: bash -c "fs_cli -x status | grep UP || exit 1"
+            timeout: 10s
+            retries: 10
+        network_mode: host
+
+    middleware:
+        depends_on:
+            freeswitch:
+                condition: service_healthy
+        image: customer1st/c1-fs-middleware:dev-latest
+        ports:
+            - 3000:3000
+            - 8085:8085
+        environment:
+            - FREESWITCH_ADDR=host.docker.internal
+            - BACKEND_ADDR=https://c1.customerfirst.se
+            - KEY=PV9sadv
+            - FREESWITCH_PORT=8021
+            - ESL_SERVER_PORT=8085
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
