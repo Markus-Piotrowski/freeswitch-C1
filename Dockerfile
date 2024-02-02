@@ -24,7 +24,7 @@ RUN apt update && apt remove -y gnupg2 wget lsb-release \
 # Install fail2ban and nano
 RUN apt update \
     && apt install -y fail2ban nano \
-    mkdir /etc/freeswitch \
+    mkdir /etc/freeswitch
 
 # Copy build
 COPY --from=build /usr/local/freeswitch /usr/local/freeswitch
