@@ -6,6 +6,7 @@
     These entries will be pre-pended to the LUA_CPATH environment variable
     -->
     <param name="module-directory" value="/usr/lib/lua/5.2/?.so"/>
+    <param name="module-directory" value="/usr/local/lib/lua/5.2/?.so"/>
     <!-- <param name="module-directory" value="/usr/lib/lua/5.1/?.so"/> -->
     <!-- <param name="module-directory" value="/usr/local/lib/lua/5.1/?.so"/> -->
 
